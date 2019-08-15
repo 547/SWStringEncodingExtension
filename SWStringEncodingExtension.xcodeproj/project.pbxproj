@@ -10,6 +10,7 @@
 		5CD332B123055658002537AF /* SWStringEncodingExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD332A723055658002537AF /* SWStringEncodingExtension.framework */; };
 		5CD332B623055658002537AF /* SWStringEncodingExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD332B523055658002537AF /* SWStringEncodingExtensionTests.swift */; };
 		5CD332B823055658002537AF /* SWStringEncodingExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CD332AA23055658002537AF /* SWStringEncodingExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CD332C52305595B002537AF /* StringEncodingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD332C42305595B002537AF /* StringEncodingExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		5CD332B023055658002537AF /* SWStringEncodingExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWStringEncodingExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD332B523055658002537AF /* SWStringEncodingExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWStringEncodingExtensionTests.swift; sourceTree = "<group>"; };
 		5CD332B723055658002537AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CD332C42305595B002537AF /* StringEncodingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEncodingExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				5CD332AA23055658002537AF /* SWStringEncodingExtension.h */,
 				5CD332AB23055658002537AF /* Info.plist */,
+				5CD332C42305595B002537AF /* StringEncodingExtension.swift */,
 			);
 			path = SWStringEncodingExtension;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					5CD332A623055658002537AF = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					5CD332AF23055658002537AF = {
 						CreatedOnToolsVersion = 10.3;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CD332C52305595B002537AF /* StringEncodingExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		5CD332BC23055658002537AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -349,6 +355,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SWStringEncodingExtension/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,6 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.timer.SWStringEncodingExtension;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +373,7 @@
 		5CD332BD23055658002537AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -373,6 +382,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SWStringEncodingExtension/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,6 +399,7 @@
 		5CD332BF23055658002537AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SWStringEncodingExtensionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +417,7 @@
 		5CD332C023055658002537AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SWStringEncodingExtensionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
