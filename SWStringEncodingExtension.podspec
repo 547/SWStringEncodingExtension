@@ -118,7 +118,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.framework  = "SomeFramework"
-  spec.frameworks = "Foundation", "CommonCrypto"
+  spec.frameworks = "Foundation"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
