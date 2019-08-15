@@ -8,7 +8,7 @@
 
 import Foundation
 import CommonCrypto
-extension String {
+public extension String {
     var md5: String? {
         var result:String? = nil
         let preResult = NSMutableString.init()
@@ -26,12 +26,12 @@ extension String {
     }
 }
 
-extension String {
+public extension String {
     ///utf-8编码
     var utf8EncodedString: String? { return addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) }
 }
 
-extension String {
+public extension String {
     var base64: String? {
         var result:String? = nil
         guard let data = self.data(using: .utf8) else {
