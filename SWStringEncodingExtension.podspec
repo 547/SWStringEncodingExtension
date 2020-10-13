@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "SWStringEncodingExtension"
-  spec.version      = "0.0.2"
-  spec.summary      = "MD5 加密，base64 加密、解密的string 的extension."
+  spec.version      = "0.0.3"
+  spec.summary      = "MD5 加密，base64 加密、解密， sha256加密 的string 的extension."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
