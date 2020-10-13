@@ -8,6 +8,7 @@
 
 import Foundation
 import CommonCrypto
+import CryptoKit
 public extension String {
     var md5: String? {
         var result:String? = nil
@@ -51,3 +52,21 @@ public extension String {
     }
 }
 
+public extension String {
+    var sha256: String? {
+        var result:String? = nil
+        guard let data = data(using: .ascii) else {
+            return result
+        }
+        if #available(iOS 13.0, *) {
+            result = SHA256.hash(data: data).makeIterator().map { String(format: "%02X", $0) }.joined()
+        } else {
+            var digest = [UInt8].init(repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
+            data.withUnsafeBytes { bytes in
+                _ = CC_SHA256(bytes.baseAddress, CC_LONG(self.count), &digest)
+            }
+            result = digest.makeIterator().map { String(format: "%02X", $0) }.joined()
+        }
+        return result
+    }
+}
